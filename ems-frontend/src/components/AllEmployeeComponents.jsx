@@ -26,7 +26,8 @@ const AllEmployeeComponents = () => {
     <div>
       <div className="container mt-5">
       <h2 className="text-center text-primary fw-bold">List of All Employees</h2>
-      <table className="table table-striped table-bordered text-center mt-4">
+      <button className='btn btn-success shadow-lg' >Add New Employee</button>
+      <table className="table table-striped table-bordered text-center mt-4 shadow">
         <thead>
             <tr>
                 <th>Id</th>
@@ -48,7 +49,7 @@ const AllEmployeeComponents = () => {
               <td> {employee.email} </td>
               <td> {employee.nic} </td>
               <td>
-                <button className='btn btn-warning' >Update</button>
+                <button className='btn btn-warning shadow-lg' >Update</button>
                 <button className='btn btn-danger' style={{marginLeft:"10px"}} >Delete</button>
               </td>
               
