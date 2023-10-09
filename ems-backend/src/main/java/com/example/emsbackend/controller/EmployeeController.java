@@ -23,6 +23,9 @@ public class EmployeeController {
         return employeeRepo.findAll();
     }
 
+//    To Check Postman Get All Employee AIP
+//    GET http://localhost:8080/api/v1/employees
+
 
 
 }
