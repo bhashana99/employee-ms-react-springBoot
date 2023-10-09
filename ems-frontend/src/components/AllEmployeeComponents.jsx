@@ -1,10 +1,26 @@
 import React from 'react'
-import { useState } from 'react';
+import { useState} from 'react';
+import { useEffect } from 'react';
+import EmployeeService from '../service/EmployeeService';
 
 const AllEmployeeComponents = () => {
 
     const [employees, setEmployees] = useState([]);
 
+    useEffect(() => {
+        getAllEmployees()
+      }, []);
+
+    const getAllEmployees = () => {
+        EmployeeService.getEmployees()
+        .then((res) => {
+          setEmployees(res.data);
+          // console.log(res.data);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+      }
 
   return (
     <div>
@@ -23,13 +39,16 @@ const AllEmployeeComponents = () => {
           
         </thead>
         <tbody>
-          <tr>
-            <th>1</th>
-            <td>Bhashana</td> 
-            <td>Chamodya</td> 
-            <td>bhashanachamodya99@gmail.com</td> 
-            <td>992830352v</td> 
-          </tr>
+        {employees.map((employee) => (
+            <tr key={employee.id}>
+              <th> {employee.id} </th>
+              <td> {employee.firstName} </td>
+              <td> {employee.lastName} </td>
+              <td> {employee.email} </td>
+              <td> {employee.nic} </td>
+              
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>
