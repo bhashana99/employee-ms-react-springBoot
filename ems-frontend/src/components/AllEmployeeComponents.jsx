@@ -3,7 +3,30 @@ import React from 'react'
 const AllEmployeeComponents = () => {
   return (
     <div>
-      <h2>All Employee Component</h2>
+      <div className="container mt-5">
+      <h2 className="text-center text-primary fw-bold">List of All Employees</h2>
+      <table className="table table-striped table-bordered text-center mt-4">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>E-mail</th>
+                <th>NIC Number</th>
+            </tr>
+          
+        </thead>
+        <tbody>
+          <tr>
+            <th>1</th>
+            <td>Bhashana</td> 
+            <td>Chamodya</td> 
+            <td>bhashanachamodya99@gmail.com</td> 
+            <td>992830352v</td> 
+          </tr>
+        </tbody>
+      </table>
+    </div>
     </div>
   )
 }
