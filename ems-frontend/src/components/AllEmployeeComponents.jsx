@@ -34,6 +34,7 @@ const AllEmployeeComponents = () => {
                 <th>Last Name</th>
                 <th>E-mail</th>
                 <th>NIC Number</th>
+                <th>Action</th>
                 
             </tr>
           
@@ -46,6 +47,10 @@ const AllEmployeeComponents = () => {
               <td> {employee.lastName} </td>
               <td> {employee.email} </td>
               <td> {employee.nic} </td>
+              <td>
+                <button className='btn btn-warning' >Update</button>
+                <button className='btn btn-danger' style={{marginLeft:"10px"}} >Delete</button>
+              </td>
               
             </tr>
           ))}
