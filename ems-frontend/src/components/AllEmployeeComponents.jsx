@@ -1,6 +1,11 @@
 import React from 'react'
+import { useState } from 'react';
 
 const AllEmployeeComponents = () => {
+
+    const [employees, setEmployees] = useState([]);
+
+
   return (
     <div>
       <div className="container mt-5">
@@ -13,6 +18,7 @@ const AllEmployeeComponents = () => {
                 <th>Last Name</th>
                 <th>E-mail</th>
                 <th>NIC Number</th>
+                
             </tr>
           
         </thead>
