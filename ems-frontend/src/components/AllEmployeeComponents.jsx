@@ -3,6 +3,23 @@ import { useState} from 'react';
 import { useEffect } from 'react';
 import {Link} from "react-router-dom";
 import EmployeeService from '../service/EmployeeService';
+import Swal from 'sweetalert2';
+import withReactContent from 'sweetalert2-react-content';
+
+
+const MySwal = withReactContent(Swal);
+
+const Toast = MySwal.mixin({
+  toast: true,
+  position: 'top-end',
+  showConfirmButton: false,
+  timer: 3000,
+  timerProgressBar: true,
+  didOpen: (toast) => {
+    toast.addEventListener('mouseenter', Swal.stopTimer)
+    toast.addEventListener('mouseleave', Swal.resumeTimer)
+  }
+});
 
 const AllEmployeeComponents = () => {
 
@@ -27,6 +44,12 @@ const AllEmployeeComponents = () => {
         // console.log(employeeId);
         EmployeeService.deleteEmployeeById(employeeId).then((response) =>{
           getAllEmployees();
+
+          Toast.fire({
+            icon: 'success',
+            iconColor:'red',
+            title: 'Employee Deleting successful'
+          });
         }).catch((error) => {
           console.log(error);
         })
