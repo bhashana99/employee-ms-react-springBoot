@@ -68,13 +68,25 @@ const NewEmployeeComponent = () => {
       });
   }, []);
 
+  const title = () => {
+    if (id) {
+      return <h2 className="text-center text-primary shadow my-4 py-3">Update Employee</h2>;
+    } else {
+      return <h2 className="text-center text-primary shadow my-4 py-3 ">Add New Employee</h2>;
+    }
+  };
+
+
 
   return (
     <div>
       <div className="container ">
         <div className="row">
           <div className="card col-md-6 offset-md-3 offset-md-3 mt-5 border border-4 shadow-lg">
-            <h2 className="text-center text-primary shadow my-4 py-3 ">Add New Employee</h2>
+            {/* <h2 className="text-center text-primary shadow my-4 py-3 ">Add New Employee</h2> */}
+            {
+              title()
+            }
             <div className="card-body">
               <form>
                 <div className="form-group mb-3">
