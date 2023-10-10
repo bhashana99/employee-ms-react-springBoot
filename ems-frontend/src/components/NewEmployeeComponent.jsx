@@ -13,7 +13,7 @@ const Toast = MySwal.mixin({
   toast: true,
   position: 'top-end',
   showConfirmButton: false,
-  timer: 1500,
+  timer: 3000,
   timerProgressBar: true,
   didOpen: (toast) => {
     toast.addEventListener('mouseenter', Swal.stopTimer)
@@ -27,6 +27,8 @@ const NewEmployeeComponent = () => {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [nic, setNic] = useState("");
+
+  const navigate = useNavigate();
 
   const saveEmployee = (e) => {
     e.preventDefault();
@@ -43,7 +45,7 @@ const NewEmployeeComponent = () => {
         title: 'Add new employee successful'
       });
 
-
+      navigate("/employees");
 
     })
     
