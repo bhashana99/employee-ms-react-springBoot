@@ -16,7 +16,7 @@ const NewEmployeeComponent = () => {
                     placeholder="Enter first name"
                     name="firstName"
                     className="form-control"
-                    
+                    required
                     
                   />
                 </div>
@@ -27,7 +27,7 @@ const NewEmployeeComponent = () => {
                     placeholder="Enter last name"
                     name="lastName"
                     className="form-control"
-                  
+                    required
                    
                   />
                 </div>
@@ -38,7 +38,7 @@ const NewEmployeeComponent = () => {
                     placeholder="Enter e-mail"
                     name="email"
                     className="form-control"
-                   
+                    required
                    
                   />
                   
@@ -50,7 +50,7 @@ const NewEmployeeComponent = () => {
                     placeholder="National Identity Card Number"
                     name="nic"
                     className="form-control mb-3"
-                  
+                    required
                    
                   />
                 </div>
