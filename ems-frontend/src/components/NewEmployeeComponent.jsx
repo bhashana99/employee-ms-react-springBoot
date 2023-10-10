@@ -62,9 +62,9 @@ const NewEmployeeComponent = () => {
                 >
                   Submit
                 </button>
-                <button  className="btn btn-danger" style={{marginLeft:"10px"}}>
+                <Link to='/employees' className="btn btn-danger" style={{marginLeft:"10px"}}>
                   Cancel
-                </button>
+                </Link>
               </form>
             </div>
           </div>
