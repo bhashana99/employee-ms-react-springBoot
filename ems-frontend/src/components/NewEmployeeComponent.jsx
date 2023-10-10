@@ -14,7 +14,7 @@ const NewEmployeeComponent = () => {
 
     const employee = { firstName, lastName, email, nic };
 
-    console.log(employee);
+    // console.log(employee);
 
 
   }
