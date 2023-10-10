@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import AllEmployeeComponents from './components/AllEmployeeComponents';
 import HeaderComponent from './components/HeaderComponent';
 import FooterComponent from './components/FooterComponent';
+import NewEmployeeComponent from './components/NewEmployeeComponent';
 
 function App() {
   return (
@@ -13,6 +14,8 @@ function App() {
         <div className='container'>
           <Routes>
             <Route path='/' element={<AllEmployeeComponents/>} ></Route>
+            <Route path='/employees' element={<AllEmployeeComponents/>} ></Route>
+            <Route path='/add-employee' element={<NewEmployeeComponent/>} ></Route>
           </Routes>
         </div>
       </Router>
