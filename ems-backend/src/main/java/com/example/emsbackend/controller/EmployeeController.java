@@ -4,6 +4,7 @@ import com.example.emsbackend.exception.ResourceNotFoundException;
 import com.example.emsbackend.model.Employee;
 import com.example.emsbackend.repo.EmployeeRepo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -66,4 +67,15 @@ public class EmployeeController {
 
     //    To Check Postman update Employee Details By Id API
     //    PUT http://localhost:8080/api/v1/employees/id
+
+    //delete employee REST API
+    @DeleteMapping("{id}")
+    public ResponseEntity<HttpStatus> deleteEmployee(@PathVariable long id){
+        Employee employee = employeeRepo.findById(id).orElseThrow(()->
+                new ResourceNotFoundException("Employee Not exist with id :" + id ));
+
+        employeeRepo.delete(employee);
+
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
 }
