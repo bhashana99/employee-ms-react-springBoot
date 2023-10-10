@@ -76,6 +76,26 @@ const NewEmployeeComponent = () => {
     }
   };
 
+  const submitButtonName = () => {
+    if (id) {
+      return <button
+      className="btn btn-success"
+      onClick={(e) => saveEmployee(e)}
+      
+    >
+      Update
+    </button>
+    } else{
+
+    return  <button
+                  className="btn btn-success"
+                  onClick={(e) => saveEmployee(e)}
+                  
+                >
+                  ADD
+                </button>
+    }
+  }
 
 
   return (
@@ -142,13 +162,9 @@ const NewEmployeeComponent = () => {
                   />
                 </div>
 
-                <button
-                  className="btn btn-success"
-                  onClick={(e) => saveEmployee(e)}
-                  
-                >
-                  Submit
-                </button>
+                {
+                  submitButtonName()
+                }
                 <Link to='/employees' className="btn btn-danger" style={{marginLeft:"10px"}}>
                   Cancel
                 </Link>
