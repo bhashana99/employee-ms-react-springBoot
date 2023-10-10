@@ -31,6 +31,7 @@ const NewEmployeeComponent = () => {
   const [nic, setNic] = useState("");
 
   const navigate = useNavigate();
+  const {id} = useParams();
 
   const saveEmployee = (e) => {
     e.preventDefault();
