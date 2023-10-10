@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import EmployeeService from '../service/EmployeeService';
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
@@ -41,6 +42,8 @@ const NewEmployeeComponent = () => {
         icon: 'success',
         title: 'Add new employee successful'
       });
+
+
 
     })
     
