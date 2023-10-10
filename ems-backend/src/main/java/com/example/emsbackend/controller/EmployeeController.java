@@ -48,4 +48,19 @@ public class EmployeeController {
     //    To Check Postman GET Employee Details By Id API
     //    GET http://localhost:8080/api/v1/employees/id
 
+    //update employee details by using id Rest API
+    @PutMapping("{id}")
+    public ResponseEntity<Employee> updateEmployee(@PathVariable long id,@RequestBody Employee employeeDetails){
+        Employee employee = employeeRepo.findById(id).orElseThrow(()->
+                new ResourceNotFoundException("Employee Not exist with id :" + id));
+
+        employee.setFirstName(employeeDetails.getFirstName());
+        employee.setLastName(employeeDetails.getLastName());
+        employee.setEmail(employeeDetails.getEmail());
+        employee.setNic(employeeDetails.getNic());
+
+        Employee updateEmployee =  employeeRepo.save(employee);
+
+        return ResponseEntity.ok(updateEmployee);
+    }
 }
