@@ -11,7 +11,10 @@ const NewEmployeeComponent = () => {
 
   const saveEmployee = (e) => {
     e.preventDefault();
-    
+
+    const employee = { firstName, lastName, email, nic };
+
+    console.log(employee);
 
 
   }
