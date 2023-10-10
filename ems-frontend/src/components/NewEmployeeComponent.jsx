@@ -57,10 +57,11 @@ const NewEmployeeComponent = () => {
   useEffect(() => {
     EmployeeService.getEmployeeById(id)
       .then((response) => {
+        // console.log(response)
         setFirstName(response.data.firstName);
         setLastName(response.data.lastName);
         setEmail(response.data.email);
-        setEmail(response.data.nic);
+        setNic(response.data.nic);
       })
       .catch((error) => {
         console.log(error);
