@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { useState } from 'react';
+import EmployeeService from '../service/EmployeeService';
 
 const NewEmployeeComponent = () => {
 
@@ -15,6 +16,7 @@ const NewEmployeeComponent = () => {
     const employee = { firstName, lastName, email, nic };
 
     // console.log(employee);
+    
 
 
   }
