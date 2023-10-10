@@ -12,12 +12,12 @@ function App() {
         <HeaderComponent />
         <div className='container'>
           <Routes>
-
+            <Route path='/' element={<AllEmployeeComponents/>} ></Route>
           </Routes>
         </div>
       </Router>
       
-      <AllEmployeeComponents />
+      {/* <AllEmployeeComponents /> */}
       <FooterComponent />
     </div>
   );
