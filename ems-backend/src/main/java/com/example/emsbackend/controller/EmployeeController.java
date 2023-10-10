@@ -1,8 +1,10 @@
 package com.example.emsbackend.controller;
 
+import com.example.emsbackend.exception.ResourceNotFoundException;
 import com.example.emsbackend.model.Employee;
 import com.example.emsbackend.repo.EmployeeRepo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -31,8 +33,15 @@ public class EmployeeController {
 
         return employeeRepo.save(employee);
     }
-//    To Check Postman Add New Employee AIP
+//    To Check Postman Add New Employee API
 //    POST http://localhost:8080/api/v1/employees
 
+    //Get Employee Details by id REST API
+    @GetMapping("{id}")
+    public ResponseEntity<Employee> getEmployeeById(@PathVariable Long id){
+        Employee employee = employeeRepo.findById(id).orElseThrow(()->
+                new ResourceNotFoundException("Employee Not exist with id :" + id));
 
+        return ResponseEntity.ok(employee);
+    }
 }
