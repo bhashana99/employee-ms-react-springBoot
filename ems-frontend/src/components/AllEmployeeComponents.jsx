@@ -51,7 +51,7 @@ const AllEmployeeComponents = () => {
               <td> {employee.nic} </td>
               <td>
                 <Link to={`/edit-employee/${employee.id}`} className='btn btn-warning shadow-lg' >Update</Link>
-                <button className='btn btn-danger' style={{marginLeft:"10px"}} >Delete</button>
+                <button className='btn btn-danger' onClick = {() => deleteEmployee(employee.id)} style={{marginLeft:"10px"}} >Delete</button>
               </td>
               
             </tr>
