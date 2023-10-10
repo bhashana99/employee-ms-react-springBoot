@@ -26,7 +26,7 @@ const AllEmployeeComponents = () => {
     <div>
       <div className="container mt-5">
       <h2 className="text-center text-primary fw-bold">List of All Employees</h2>
-      <button className='btn btn-success shadow-lg' >Add New Employee</button>
+      <Link to='/add-employee' className='btn btn-success shadow-lg' >Add New Employee</Link>
       <table className="table table-striped table-bordered text-center mt-4 shadow">
         <thead>
             <tr>
