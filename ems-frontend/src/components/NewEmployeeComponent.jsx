@@ -44,12 +44,12 @@ const NewEmployeeComponent = () => {
                   
                 </div>
                 <div className="form-group mb-3">
-                  <label className="form-label fw-bold">National Identity Card Number:</label>
+                  <label className="form-label fw-bold">NIC:</label>
                   <input
                     type="text"
-                    placeholder="Enter last name"
+                    placeholder="National Identity Card Number"
                     name="nic"
-                    className="form-control"
+                    className="form-control mb-3"
                   
                    
                   />
