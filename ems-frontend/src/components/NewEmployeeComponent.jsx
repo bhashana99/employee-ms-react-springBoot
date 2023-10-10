@@ -3,10 +3,10 @@ import React from 'react'
 const NewEmployeeComponent = () => {
   return (
     <div>
-      <div className="container mt-5 ">
+      <div className="container ">
         <div className="row">
-          <div className="card col-md-6 offset-md-3 offset-md-3">
-            <h2 className="text-center text-primary ">Add New Employee</h2>
+          <div className="card col-md-6 offset-md-3 offset-md-3 mt-5 border border-4 shadow-lg">
+            <h2 className="text-center text-primary shadow my-4 py-3 ">Add New Employee</h2>
             <div className="card-body">
               <form>
                 <div className="form-group mb-3">
