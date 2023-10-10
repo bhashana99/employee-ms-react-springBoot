@@ -23,6 +23,15 @@ const AllEmployeeComponents = () => {
         });
       }
 
+      const deleteEmployee = (employeeId) => {
+        // console.log(employeeId);
+        EmployeeService.deleteEmployeeById(employeeId).then((response) =>{
+          getAllEmployees();
+        }).catch((error) => {
+          console.log(error);
+        })
+      }
+
   return (
     <div>
       <div className="container mt-5 ">
