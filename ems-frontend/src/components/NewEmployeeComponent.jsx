@@ -9,6 +9,13 @@ const NewEmployeeComponent = () => {
   const [email, setEmail] = useState("");
   const [nic, setNic] = useState("");
 
+  const saveEmployee = (e) => {
+    e.preventDefault();
+    
+
+
+  }
+
 
   return (
     <div>
