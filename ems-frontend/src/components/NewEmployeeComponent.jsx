@@ -73,7 +73,7 @@ const NewEmployeeComponent = () => {
 
                 <button
                   className="btn btn-success"
-                  
+                  onClick={(e) => saveEmployee(e)}
                   
                 >
                   Submit
