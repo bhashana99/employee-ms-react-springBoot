@@ -33,14 +33,26 @@ const NewEmployeeComponent = () => {
   const navigate = useNavigate();
   const {id} = useParams();
 
-  const saveEmployee = (e) => {
+  const saveOrUpdateEmployee = (e) => {
     e.preventDefault();
+    
 
     const employee = { firstName, lastName, email, nic };
 
     // console.log(employee);
+    if(id){
+      EmployeeService.updateEmployee(id,employee)
+      .then((res) => {
+        Toast.fire({
+          icon: 'success',
+          title: 'Employee update successfully'
+        });
+  
+        navigate("/employees");
+      })
 
-    EmployeeService.addEmployee(employee)
+    }else{
+      EmployeeService.addEmployee(employee)
     .then((res)=>{
 
       Toast.fire({
@@ -51,6 +63,9 @@ const NewEmployeeComponent = () => {
       navigate("/employees");
 
     })
+    }
+
+    
     
   }
 
@@ -79,8 +94,8 @@ const NewEmployeeComponent = () => {
   const submitButtonName = () => {
     if (id) {
       return <button
-      className="btn btn-success"
-      onClick={(e) => saveEmployee(e)}
+      className="btn btn-warning"
+      onClick={(e) => saveOrUpdateEmployee(e)}
       
     >
       Update
@@ -89,7 +104,7 @@ const NewEmployeeComponent = () => {
 
     return  <button
                   className="btn btn-success"
-                  onClick={(e) => saveEmployee(e)}
+                  onClick={(e) => saveOrUpdateEmployee(e)}
                   
                 >
                   ADD
