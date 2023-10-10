@@ -50,7 +50,7 @@ const AllEmployeeComponents = () => {
               <td> {employee.email} </td>
               <td> {employee.nic} </td>
               <td>
-                <button className='btn btn-warning shadow-lg' >Update</button>
+                <Link to='{`/edit-employee/${employee.id}`}' className='btn btn-warning shadow-lg' >Update</Link>
                 <button className='btn btn-danger' style={{marginLeft:"10px"}} >Delete</button>
               </td>
               
