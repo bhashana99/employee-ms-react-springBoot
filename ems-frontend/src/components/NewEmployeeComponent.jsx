@@ -26,7 +26,7 @@ const NewEmployeeComponent = () => {
                     name="firstName"
                     className="form-control"
                     required
-                    
+                    value={firstName}
                   />
                 </div>
                 <div className="form-group mb-3">
@@ -37,6 +37,7 @@ const NewEmployeeComponent = () => {
                     name="lastName"
                     className="form-control"
                     required
+                    value={lastName}
                    
                   />
                 </div>
@@ -48,6 +49,7 @@ const NewEmployeeComponent = () => {
                     name="email"
                     className="form-control"
                     required
+                    value={email}
                    
                   />
                   
@@ -60,6 +62,7 @@ const NewEmployeeComponent = () => {
                     name="nic"
                     className="form-control mb-3"
                     required
+                    value={nic}
                    
                   />
                 </div>
