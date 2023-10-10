@@ -31,6 +31,8 @@ public class EmployeeController {
 
         return employeeRepo.save(employee);
     }
+//    To Check Postman Add New Employee AIP
+//    POST http://localhost:8080/api/v1/employees
 
 
 }
