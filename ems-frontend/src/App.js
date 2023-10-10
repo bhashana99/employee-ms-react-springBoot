@@ -7,6 +7,7 @@ import FooterComponent from './components/FooterComponent';
 function App() {
   return (
     <div >
+      <Router></Router>
       <HeaderComponent />
       <AllEmployeeComponents />
       <FooterComponent />
