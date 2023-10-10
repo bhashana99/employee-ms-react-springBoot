@@ -27,6 +27,7 @@ const NewEmployeeComponent = () => {
                     className="form-control"
                     required
                     value={firstName}
+                    onChange={(e) => setFirstName(e.target.value)}
                   />
                 </div>
                 <div className="form-group mb-3">
@@ -38,6 +39,7 @@ const NewEmployeeComponent = () => {
                     className="form-control"
                     required
                     value={lastName}
+                    onChange={(e) => setLastName(e.target.value)}
                    
                   />
                 </div>
@@ -50,6 +52,7 @@ const NewEmployeeComponent = () => {
                     className="form-control"
                     required
                     value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                    
                   />
                   
@@ -63,6 +66,7 @@ const NewEmployeeComponent = () => {
                     className="form-control mb-3"
                     required
                     value={nic}
+                    onChange={(e) => setNic(e.target.value)}
                    
                   />
                 </div>
